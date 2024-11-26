@@ -1,0 +1,141 @@
+.main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.upper-content,
+.bottom-content {
+  height: 120vh;
+  background-color: #555;
+  margin-bottom: 200px;
+}
+
+.bottom-content {
+  margin-bottom: 0;
+}
+
+.work-content {
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  padding-right: calc(50vw - 50%);
+  padding-left: calc(50vw - 50%);
+}
+
+.works_main-ttl {
+  position: sticky;
+  top: 10px;
+  font-size: clamp(2.5rem, 0.714rem + 8.93vw, 8.75rem);
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.work-area {
+  margin-top: 30%;
+}
+
+.row {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0);
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bg-1 {
+  background-image: url("./img/test-1.jpg");
+}
+
+.bg-2 {
+  background-image: url("./img/test-2.jpg");
+}
+.bg-3 {
+  background-image: url("./img/test-3.jpg");
+}
+
+.bg::before {
+  content: "";
+  background: inherit;
+  filter: blur(6px);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+}
+
+.inner .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: min(85vw, 500px);
+  /* background-color: #fff; */
+}
+
+@media (min-width: 768px) {
+  .inner .box {
+    display: grid;
+    grid-template-columns: 1fr min(85vw, 500px) 1fr;
+    max-width: 1440px;
+  }
+  /* .img {
+    width: 500px;
+  } */
+}
+
+.inner .box .img {
+  width: min(85vw, 500px);
+  height: min(85vw, 500px);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.img-1 {
+  background-image: url("./img/test-1.jpg");
+}
+.img-2 {
+  background-image: url("./img/test-2.jpg");
+}
+.img-3 {
+  background-image: url("./img/test-3.jpg");
+}
+
+.works_num {
+  max-width: min(85vw, 500px);
+  font-size: 0.75rem;
+  color: #fff;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.works_ttl {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 1rem;
+}
